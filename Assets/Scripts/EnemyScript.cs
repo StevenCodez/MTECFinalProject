@@ -35,12 +35,15 @@ public class EnemyScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Left" || collision.tag == "Right")
+        if (collision.tag == "Right")
         {
 
             speed = -1;
         }
-
+        if(collision.tag == "Left")
+        {
+            speed = +1;
+        }
     }
 
 
