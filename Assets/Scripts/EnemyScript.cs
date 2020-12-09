@@ -9,16 +9,12 @@ public class EnemyScript : MonoBehaviour
 
     
 
-    //private OppBarrier OpponentBarrier;
+ 
     
     
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("MoveEnemy", 0.1f, 0.3f);
-        //OpponentBarrier = GetComponent<OppBarrier>();
-        //Debug.Log("speed" + speed);
-        enemyHolder = GetComponent < Transform > ();
 
     }
 
@@ -48,29 +44,5 @@ public class EnemyScript : MonoBehaviour
 
 
 
-    /*
-    void MoveEnemy()
-    {
-        enemyHolder.position += Vector3.right * speed * Time.deltaTime;
-
-        foreach (Transform enemy in enemyHolder)
-        {
-
-            if (enemy.position.x < -10.5 || enemy.position.x > 10.5)
-            {
-                speed = -speed;
-                //enemyHolder.position += Vector3.down * 0.5f
-                return;
-            }
-        }
-
-        if (enemyHolder.childCount == 1)
-        {
-            CancelInvoke();
-            InvokeRepeating("MoveEnemy", 0.1f, 0.25f);
-
-        }
-
-       
-    }*/
+  
 }
