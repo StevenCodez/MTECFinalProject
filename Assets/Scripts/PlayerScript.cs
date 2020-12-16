@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //player = GetComponent<Transform>();
-
+        
 
     }
     // Update is called once per frame
@@ -30,7 +30,9 @@ public class PlayerScript : MonoBehaviour
             float xValue = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
         Vector3 movedirection = new Vector3(xValue, rb.velocity.y, 0);
-            rb.velocity = movedirection;
+        rb.velocity = movedirection;
+
+        
 
 
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))

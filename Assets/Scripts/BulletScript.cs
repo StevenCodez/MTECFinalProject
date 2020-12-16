@@ -10,16 +10,22 @@ public class BulletScript : MonoBehaviour
     private GameObject UFO;
     public Transform shotSpawn;
 
+    //private Score PlayerScore;
+    //private bool scoreflag;
+
+    private bool HPflag;
+
     void Start()
     {
         Bullet = GetComponent<Transform>();
         UFO = GetComponent<GameObject>();
+        //PlayerScore = GetComponent<Score>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(HP);
 
     }
     private void FixedUpdate()
@@ -33,8 +39,8 @@ public class BulletScript : MonoBehaviour
 
         if (HP == 0)
         {
-            
-            Destroy(UFO.gameObject);
+
+            //HPflag == true;
         }
 
     }
@@ -45,17 +51,24 @@ public class BulletScript : MonoBehaviour
         if (collision.tag == "Enemy"){
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            //scoreflag = false;
+            Score.score += 100; 
         }
 
         if (collision.tag == "UFO")
         {
-            HP = -1;
+
+            //scoreflag = false;
             
+            HP = -1;
+            //PlayerScore.IncrementScore();
+        }
+
+        if (collision.tag == "UFO" && HPflag == true)
+        {
+            Destroy(gameObject);
         }
 
         
-
-        //else if (other.tag == "Base")
-        //Destroy 
     }  
 }

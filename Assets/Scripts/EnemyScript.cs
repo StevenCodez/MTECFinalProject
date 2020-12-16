@@ -23,7 +23,7 @@ public class EnemyScript : MonoBehaviour
     {
         
         transform.position += (Vector3.right * speed * Time.deltaTime);
-        Debug.Log("speed" + speed);
+        
       
         
 

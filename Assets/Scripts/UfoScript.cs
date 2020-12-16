@@ -35,8 +35,7 @@ public class UfoScript : MonoBehaviour
         timestampF = Random.Range(1.5f, 2f);
         timestamp = Mathf.Round(timestampF * 100f) / 100f;
         
-        Debug.Log("timestamp" + timestamp);
-        //if (Time.time >= timestamp)
+        
         if (timestamp == 1.5)
         {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
@@ -50,11 +49,11 @@ public class UfoScript : MonoBehaviour
         if (collision.tag == "Right")
         {
 
-            speed = -1;
+            speed = -3;
         }
         if (collision.tag == "Right2")
         {
-            speed = 1;
+            speed = 3;
         }
 
 
