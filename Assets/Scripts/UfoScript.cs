@@ -8,7 +8,7 @@ public class UfoScript : MonoBehaviour
     private float timestampF;
     private float timestamp;
     private float timeBetweenShots = 2;
-    //private float timeBetweenShots = Random.Range(0.5f, 2f);
+    
 
 
     public GameObject shot;

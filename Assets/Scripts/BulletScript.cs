@@ -1,31 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class BulletScript : MonoBehaviour
 {
     public float speed;
     private Transform Bullet;
-    private float HP = 3;
-    private GameObject UFO;
+    //private float HP = 3;
+    
     public Transform shotSpawn;
 
-    //private Score PlayerScore;
-    //private bool scoreflag;
-
-    private bool HPflag;
+    //Score not working
+    /*private Score PlayerScore;
+    public Text ScoreText;*/
+   
+    //private bool HPflag;
 
     void Start()
     {
         Bullet = GetComponent<Transform>();
-        UFO = GetComponent<GameObject>();
+        //UFO = GetComponent<GameObject>();
         //PlayerScore = GetComponent<Score>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        Debug.Log(HP);
+        //Debug.Log(HP);
 
     }
     private void FixedUpdate()
@@ -37,11 +40,7 @@ public class BulletScript : MonoBehaviour
         if (Bullet.position.y >= 5)
             Destroy(gameObject);
 
-        if (HP == 0)
-        {
-
-            //HPflag == true;
-        }
+        
 
     }
 
@@ -51,23 +50,24 @@ public class BulletScript : MonoBehaviour
         if (collision.tag == "Enemy"){
             Destroy(collision.gameObject);
             Destroy(gameObject);
-            //scoreflag = false;
-            Score.score += 100; 
+            
+            //Score.score += 100;
+            //PlayerScore.IncrementScore();
         }
 
         if (collision.tag == "UFO")
         {
 
-            //scoreflag = false;
             
-            HP = -1;
+            Destroy(gameObject);
+            //HP = -1;
             //PlayerScore.IncrementScore();
         }
 
-        if (collision.tag == "UFO" && HPflag == true)
+        /*if (collision.tag == "UFO" && HPflag == true)
         {
             Destroy(gameObject);
-        }
+        }*/
 
         
     }  

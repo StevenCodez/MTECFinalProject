@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 public class Score : MonoBehaviour
+
 {
-    public static float score = 0;
-    
+    public int score = 0;
+
     public TextMeshPro scoreText;
 
-    void Start()
-    {
-        scoreText = GetComponent<TextMeshPro>();
-    }
-    void Update()
+
+    public void IncrementScore()
     {
         score++;
-        scoreText.text = "Score:" + score;
+        //scoreText.text = score.ToString("Score: " + score);
     }
 }
+
