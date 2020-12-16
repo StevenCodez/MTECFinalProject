@@ -31,6 +31,12 @@ public class BulletScript : MonoBehaviour
         if (Bullet.position.y >= 5)
             Destroy(gameObject);
 
+        if (HP == 0)
+        {
+            
+            Destroy(UFO.gameObject);
+        }
+
     }
 
 
@@ -47,11 +53,7 @@ public class BulletScript : MonoBehaviour
             
         }
 
-        if (HP == 0)
-        {
-            Destroy(collision.gameObject); 
-            Destroy(gameObject);
-        }
+        
 
         //else if (other.tag == "Base")
         //Destroy 

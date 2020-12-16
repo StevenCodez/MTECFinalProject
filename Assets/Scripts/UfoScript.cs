@@ -5,8 +5,10 @@ using UnityEngine;
 public class UfoScript : MonoBehaviour
 {
     public float speed;
+    private float timestampF;
     private float timestamp;
-    private float timeBetweenShots = 0.5f;
+    private float timeBetweenShots = 2;
+    //private float timeBetweenShots = Random.Range(0.5f, 2f);
 
 
     public GameObject shot;
@@ -27,14 +29,19 @@ public class UfoScript : MonoBehaviour
     void Update()
     {
 
-        transform.position += (Vector3.right * speed * Time.deltaTime);
-        Debug.Log("speed" + speed);
+        transform.position += (Vector3.left * speed * Time.deltaTime);
+        
 
-
-        if (Time.time >= timestamp)
+        timestampF = Random.Range(1.5f, 2f);
+        timestamp = Mathf.Round(timestampF * 100f) / 100f;
+        
+        Debug.Log("timestamp" + timestamp);
+        //if (Time.time >= timestamp)
+        if (timestamp == 1.5)
         {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             timestamp = Time.time + timeBetweenShots;
+
         }
 
     }
@@ -43,11 +50,11 @@ public class UfoScript : MonoBehaviour
         if (collision.tag == "Right")
         {
 
-            speed = +1;
+            speed = -1;
         }
         if (collision.tag == "Right2")
         {
-            speed = -1;
+            speed = 1;
         }
 
 

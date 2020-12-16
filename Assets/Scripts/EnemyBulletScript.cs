@@ -23,12 +23,15 @@ public class EnemyBulletScript : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        EnemyBullet.position += (Vector3.up * speed * Time.deltaTime);
+        EnemyBullet.position += (Vector3.down * speed * Time.deltaTime);
 
 
 
-        if (EnemyBullet.position.y >= -1000)
-            Destroy(gameObject);
+        /*if (EnemyBullet.position.y >= -1000)
+        {
+            //Destroy(gameObject);
+        }*/
+
 
     }
 

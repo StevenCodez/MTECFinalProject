@@ -3799,7 +3799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9386889f29b6f48b84058b93f5771f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   shot: {fileID: 9176737240582413193, guid: f279c52487aa7f247b2b9e0ebcc67da6, type: 3}
   shotSpawn: {fileID: 2021794156}
 --- !u!50 &2021794158
