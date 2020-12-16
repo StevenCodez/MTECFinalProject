@@ -6,13 +6,14 @@ public class BulletScript : MonoBehaviour
 {
     public float speed;
     private Transform Bullet;
-
+    private float HP = 3;
+    private GameObject UFO;
     public Transform shotSpawn;
 
     void Start()
     {
         Bullet = GetComponent<Transform>();
-
+        UFO = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
@@ -27,7 +28,7 @@ public class BulletScript : MonoBehaviour
         
         
 
-        if (Bullet.position.y >= 10)
+        if (Bullet.position.y >= 5)
             Destroy(gameObject);
 
     }
@@ -40,7 +41,19 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.tag == "UFO")
+        {
+            HP = -1;
+            
+        }
+
+        if (HP == 0)
+        {
+            Destroy(collision.gameObject); 
+            Destroy(gameObject);
+        }
+
         //else if (other.tag == "Base")
-            //Destroy 
+        //Destroy 
     }  
 }

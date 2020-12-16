@@ -10,6 +10,8 @@ TagManager:
   - Barrier
   - Enemy
   - Bullet
+  - Right2
+  - UFO
   layers:
   - Default
   - TransparentFX

@@ -9,15 +9,18 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject shot;
 
+    private float timestamp;
+    private float timeBetweenShots = 0.5f;
+
     public Transform shotSpawn;
-    public float firerate;
-    private float nextshot;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GetComponent<Transform>();
+        //player = GetComponent<Transform>();
 
 
     }
@@ -29,11 +32,15 @@ public class PlayerScript : MonoBehaviour
         Vector3 movedirection = new Vector3(xValue, rb.velocity.y, 0);
             rb.velocity = movedirection;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
             //transform.position = Bullet.position;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            nextshot = Time.time + firerate;
+            timestamp = Time.time + timeBetweenShots;
+
         }
+
+       
     }
 }
