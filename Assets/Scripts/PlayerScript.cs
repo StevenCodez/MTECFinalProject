@@ -13,8 +13,8 @@ public class PlayerScript : MonoBehaviour
     private float timeBetweenShots = 0.3f;
 
     public Transform shotSpawn;
-    
-    
+
+    public AudioSource shoot;
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class PlayerScript : MonoBehaviour
             
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             timestamp = Time.time + timeBetweenShots;
-
+            shoot.Play();
         }
 
        

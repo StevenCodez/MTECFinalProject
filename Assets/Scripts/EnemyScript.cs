@@ -6,13 +6,6 @@ public class EnemyScript : MonoBehaviour
 {
     public float speed;
     
-
-    
-
- 
-    
-    
-    
     void Start()
     {
 

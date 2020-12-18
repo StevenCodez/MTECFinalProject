@@ -15,9 +15,7 @@ public class BulletScript : MonoBehaviour
     public Color color;
 
     
-   
-    private float HP = 3;
-    public bool HPflag;
+    
 
     void Start()
     {
@@ -26,11 +24,7 @@ public class BulletScript : MonoBehaviour
     }
 
     
-    void Update()
-    {
-        //Debug.Log("HP" + HP);
-
-    }
+    
     private void FixedUpdate()
     {
         Bullet.position += (Vector3.up * speed * Time.deltaTime); 
@@ -40,10 +34,7 @@ public class BulletScript : MonoBehaviour
         if (Bullet.position.y >= 5)
             Destroy(gameObject);
         
-        if(HP== 0)
-        {
-            HPflag = true;
-        }
+        
         
 
     }
