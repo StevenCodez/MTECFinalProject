@@ -14,17 +14,15 @@ public class BulletScript : MonoBehaviour
 
     public Color color;
 
-    //Score not working
-    /*private Score PlayerScore;
-    public Text ScoreText;*/
+    
+   
     private float HP = 3;
     public bool HPflag;
 
     void Start()
     {
         Bullet = GetComponent<Transform>();
-        //UFO = GetComponent<GameObject>();
-        //PlayerScore = GetComponent<Score>();
+        
     }
 
     
@@ -66,7 +64,7 @@ public class BulletScript : MonoBehaviour
 
         if (collision.tag == "UFO")
         {
-
+            Score.score += 300;
             if (collision.GetComponent<UfoScript>() != null)
             {
                 collision.GetComponent<UfoScript>().HP -= 1;
@@ -74,18 +72,10 @@ public class BulletScript : MonoBehaviour
             }
 
 
-            //ScriptthehasHp.Hp -= 1;
-            //Destroy(collision.gameObject);//This kills the UFO
+
             Destroy(gameObject);
-            //HP = HP -1;
-            //PlayerScore.IncrementScore();
+
+
         }
-
-        /*if (collision.tag == "UFO" && HPflag == true)
-        {
-            Destroy(gameObject);
-            Destroy(collision.gameObject);
-
-        }*/
     }  
 }

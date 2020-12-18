@@ -15,7 +15,7 @@ public class EnemyBulletScript : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 
@@ -27,11 +27,7 @@ public class EnemyBulletScript : MonoBehaviour
 
 
 
-        /*if (EnemyBullet.position.y >= -1000)
-        {
-            //Destroy(gameObject);
-        }*/
-
+       
 
     }
 
@@ -44,7 +40,6 @@ public class EnemyBulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //else if (other.tag == "Base")
-        //Destroy 
+        
     }
 }

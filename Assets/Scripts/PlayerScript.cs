@@ -10,21 +10,20 @@ public class PlayerScript : MonoBehaviour
     public GameObject shot;
 
     private float timestamp;
-    private float timeBetweenShots = 0.5f;
+    private float timeBetweenShots = 0.3f;
 
     public Transform shotSpawn;
     
     
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //player = GetComponent<Transform>();
+        
         
 
     }
-    // Update is called once per frame
+
     void Update()
     {
             float xValue = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
@@ -37,7 +36,7 @@ public class PlayerScript : MonoBehaviour
 
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
-            //transform.position = Bullet.position;
+            
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             timestamp = Time.time + timeBetweenShots;
 

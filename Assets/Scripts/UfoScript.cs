@@ -14,7 +14,7 @@ public class UfoScript : MonoBehaviour
     public GameObject shot;
     public Transform shotSpawn;
     public int HP = 3;
-     // make a Health variable
+     
     
 
 
