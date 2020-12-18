@@ -8,15 +8,17 @@ public class BulletScript : MonoBehaviour
 {
     public float speed;
     private Transform Bullet;
-    //private float HP = 3;
+    
     
     public Transform shotSpawn;
+
+    public Color color;
 
     //Score not working
     /*private Score PlayerScore;
     public Text ScoreText;*/
-   
-    //private bool HPflag;
+    private float HP = 3;
+    public bool HPflag;
 
     void Start()
     {
@@ -28,7 +30,7 @@ public class BulletScript : MonoBehaviour
     
     void Update()
     {
-        //Debug.Log(HP);
+        //Debug.Log("HP" + HP);
 
     }
     private void FixedUpdate()
@@ -39,7 +41,11 @@ public class BulletScript : MonoBehaviour
 
         if (Bullet.position.y >= 5)
             Destroy(gameObject);
-
+        
+        if(HP== 0)
+        {
+            HPflag = true;
+        }
         
 
     }
@@ -48,27 +54,38 @@ public class BulletScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy"){
+            Score.score += 100;
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
             
-            //Score.score += 100;
+            
             //PlayerScore.IncrementScore();
         }
+
 
         if (collision.tag == "UFO")
         {
 
-            
+            if (collision.GetComponent<UfoScript>() != null)
+            {
+                collision.GetComponent<UfoScript>().HP -= 1;
+
+            }
+
+
+            //ScriptthehasHp.Hp -= 1;
+            //Destroy(collision.gameObject);//This kills the UFO
             Destroy(gameObject);
-            //HP = -1;
+            //HP = HP -1;
             //PlayerScore.IncrementScore();
         }
 
         /*if (collision.tag == "UFO" && HPflag == true)
         {
             Destroy(gameObject);
-        }*/
+            Destroy(collision.gameObject);
 
-        
+        }*/
     }  
 }

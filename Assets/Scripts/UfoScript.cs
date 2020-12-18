@@ -13,7 +13,8 @@ public class UfoScript : MonoBehaviour
 
     public GameObject shot;
     public Transform shotSpawn;
-
+    public int HP = 3;
+     // make a Health variable
     
 
 
@@ -28,6 +29,10 @@ public class UfoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (HP == 0)
+        {
+            Destroy(gameObject);
+        }
 
         transform.position += (Vector3.left * speed * Time.deltaTime);
         
@@ -49,11 +54,11 @@ public class UfoScript : MonoBehaviour
         if (collision.tag == "Right")
         {
 
-            speed = -3;
+            speed = -4;
         }
         if (collision.tag == "Right2")
         {
-            speed = 3;
+            speed = 4;
         }
 
 
