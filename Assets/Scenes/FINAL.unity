@@ -1859,7 +1859,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2376,6 +2376,7 @@ GameObject:
   - component: {fileID: 634884028}
   - component: {fileID: 634884027}
   - component: {fileID: 634884026}
+  - component: {fileID: 634884030}
   m_Layer: 0
   m_Name: Restart
   m_TagString: Untagged
@@ -2390,7 +2391,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 634884025}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
@@ -2539,6 +2540,18 @@ RectTransform:
   m_AnchoredPosition: {x: 1.41, y: -1.42}
   m_SizeDelta: {x: 15.179737, y: 3.8437967}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &634884030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634884025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d133e85cf8b32e4429df903243b0bc8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &635987860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8603372518047437640, guid: 4f00b3202cfee864a98e4f255ec4088f,
@@ -4387,7 +4400,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1911226857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
   m_Name: 
