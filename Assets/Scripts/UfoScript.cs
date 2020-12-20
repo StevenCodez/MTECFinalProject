@@ -17,6 +17,8 @@ public class UfoScript : MonoBehaviour
 
 
     public AudioSource explosion;
+    public AudioSource hitmarker;
+    public AudioSource shoot;
 
 
 
@@ -34,11 +36,11 @@ public class UfoScript : MonoBehaviour
             Destroy(gameObject);
             explosion.Play();
         }
-
+       
         transform.position += (Vector3.left * speed * Time.deltaTime);
         
 
-        timestampF = Random.Range(1.5f, 3f);
+        timestampF = Random.Range(1.5f, 20f);
         timestamp = Mathf.Round(timestampF * 100f) / 100f;
         
         
@@ -46,6 +48,7 @@ public class UfoScript : MonoBehaviour
         {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             timestamp = Time.time + timeBetweenShots;
+            shoot.Play();
 
         }
 
@@ -54,12 +57,17 @@ public class UfoScript : MonoBehaviour
     {
         if (collision.tag == "Right")
         {
+            
+
+            hitmarker.Play();
+            
 
             speed = -4;
         }
         if (collision.tag == "Right2")
         {
             speed = 4;
+            hitmarker.Play();
         }
 
 

@@ -19,7 +19,7 @@ public class EnemyShoot : MonoBehaviour
     
     void Update()
     {
-        timestampF = Random.Range(1.5f, 6f);
+        timestampF = Random.Range(1.5f, 8f);
         timestamp = Mathf.Round(timestampF * 100f) / 100f;
 
 

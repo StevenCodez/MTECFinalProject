@@ -146,3 +146,4 @@ MonoBehaviour:
   speed: 5
   shotSpawn: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
+  hitmarker: {fileID: 0}

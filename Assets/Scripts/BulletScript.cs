@@ -15,7 +15,8 @@ public class BulletScript : MonoBehaviour
     public Color color;
 
     
-    
+
+
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.tag == "Enemy"){
             Score.score += 100;
-
+            
             Destroy(collision.gameObject);
             Destroy(gameObject);
             

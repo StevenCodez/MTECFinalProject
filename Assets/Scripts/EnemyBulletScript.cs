@@ -42,6 +42,13 @@ public class EnemyBulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
+        if (collision.tag == "Bullet")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+            Score.score += 50;
+        }
+
+
     }
 }
