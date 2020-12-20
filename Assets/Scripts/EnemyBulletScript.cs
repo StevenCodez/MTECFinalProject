@@ -7,7 +7,9 @@ public class EnemyBulletScript : MonoBehaviour
     public float speed;
     private Transform EnemyBullet;
 
-    public Transform shotSpawn;
+    
+
+
 
     void Start()
     {

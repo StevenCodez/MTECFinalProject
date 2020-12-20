@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject shot;
+    public GameObject shot;  //this is just like enemy script except allowing individual sprites to shoot. (Not for UFo)
     public Transform shotSpawn;
 
     private float timestampF;
@@ -19,7 +19,7 @@ public class EnemyShoot : MonoBehaviour
     
     void Update()
     {
-        timestampF = Random.Range(1.5f, 3f);
+        timestampF = Random.Range(1.5f, 6f);
         timestamp = Mathf.Round(timestampF * 100f) / 100f;
 
 

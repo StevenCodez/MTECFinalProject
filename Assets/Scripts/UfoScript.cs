@@ -37,7 +37,7 @@ public class UfoScript : MonoBehaviour
         transform.position += (Vector3.left * speed * Time.deltaTime);
         
 
-        timestampF = Random.Range(1.5f, 2f);
+        timestampF = Random.Range(1.5f, 3f);
         timestamp = Mathf.Round(timestampF * 100f) / 100f;
         
         

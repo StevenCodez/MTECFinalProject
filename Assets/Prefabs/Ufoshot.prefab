@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2576403491951747175
+--- !u!114 &-672445805772987772
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 9176737240582413193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d3975f85ecf934fa0fea26d3057b9f, type: 3}
+  m_Script: {fileID: 11500000, guid: fc386a1c605426944b3b5745d42037c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  shotSpawn: {fileID: 0}
+  speed: 4
 --- !u!1001 &8860874151879357607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24,7 +23,12 @@ PrefabInstance:
     - target: {fileID: 406018850299506478, guid: 0bc58555f80e80940877a01b95261ed9,
         type: 3}
       propertyPath: m_Name
-      value: EnemyBullet
+      value: Ufoshot
+      objectReference: {fileID: 0}
+    - target: {fileID: 406018850299506513, guid: 0bc58555f80e80940877a01b95261ed9,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 406018850299506514, guid: 0bc58555f80e80940877a01b95261ed9,
         type: 3}
@@ -96,8 +100,7 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.09759998
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -1164227357376962860, guid: 0bc58555f80e80940877a01b95261ed9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc58555f80e80940877a01b95261ed9, type: 3}
 --- !u!1 &9176737240582413193 stripped
 GameObject:

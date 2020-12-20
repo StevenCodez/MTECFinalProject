@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public float speed;
-    
+
+   
     void Start()
     {
 
@@ -14,11 +15,10 @@ public class EnemyScript : MonoBehaviour
     
     void Update()
     {
-        
-        transform.position += (Vector3.right * speed * Time.deltaTime);
-        
-      
-        
+
+
+
+        transform.position += (Vector3.left * speed * Time.deltaTime);
 
     }
 
@@ -27,11 +27,11 @@ public class EnemyScript : MonoBehaviour
         if (collision.tag == "Right")
         {
 
-            speed = -1;
+            speed = +1;
         }
         if(collision.tag == "Left")
         {
-            speed = +1;
+            speed = -1;
         }
     }
 
