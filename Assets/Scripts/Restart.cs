@@ -17,6 +17,7 @@ public class Restart : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene("FINAL");
+            Score.score = 0;
         }
     }
 }

@@ -14,9 +14,9 @@ public class UfoScript : MonoBehaviour
     public GameObject shot;
     public Transform shotSpawn;
     public int HP = 3;
-     
-    
 
+
+    public AudioSource explosion;
 
 
 
@@ -32,6 +32,7 @@ public class UfoScript : MonoBehaviour
         if (HP == 0)
         {
             Destroy(gameObject);
+            explosion.Play();
         }
 
         transform.position += (Vector3.left * speed * Time.deltaTime);

@@ -19,20 +19,19 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
-        
+               
 
     }
 
     void Update()
     {
-            float xValue = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float xValue = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
         Vector3 movedirection = new Vector3(xValue, rb.velocity.y, 0);
         rb.velocity = movedirection;
 
         
-
+        
 
         if (Time.time >= timestamp && Input.GetKeyDown(KeyCode.Space))
         {
